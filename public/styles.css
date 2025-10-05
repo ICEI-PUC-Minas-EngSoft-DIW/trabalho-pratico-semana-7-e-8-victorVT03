@@ -1,7 +1,7 @@
-/* --- Variáveis de Cores e Configurações Globais --- */
+
 :root {
-  --primary-color: #CC0000; /* Vermelho do YouTube */
-  --secondary-color: #FF0000; /* Vermelho mais vibrante */
+  --primary-color: #CC0000; 
+  --secondary-color: #FF0000; 
   --header-bg: #212121;
   --sidebar-bg: #f9f9f9;
   --main-bg: #ffffff;
@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
 }
 
-/* --- Cabeçalho --- */
+
 .header {
   background-color: var(--header-bg);
   color: #fff;
@@ -86,28 +86,27 @@ body {
   margin-left: 0.5rem;
   border-radius: 4px;
   cursor: pointer;
-  white-space: nowrap; /* Evita que o texto quebre */
+  white-space: nowrap;
 }
 .user-actions button:hover {
   background-color: #333;
 }
 
 
-/* --- Layout Principal --- */
 .main-container {
   display: flex;
 }
 
-/* --- Barra Lateral --- */
+
 .sidebar {
   width: 240px;
   background-color: var(--sidebar-bg);
   padding-top: 1rem;
-  height: calc(100vh - 56px); /* Altura total menos a altura do header */
+  height: calc(100vh - 56px); 
   position: sticky;
-  top: 56px; /* "Gruda" abaixo do header */
+  top: 56px; 
   overflow-y: auto;
-  flex-shrink: 0; /* Impede que a sidebar encolha */
+  flex-shrink: 0; 
   border-right: 1px solid var(--border-color);
 }
 
@@ -121,8 +120,9 @@ body {
   padding: 0.8rem 1.5rem;
   text-decoration: none;
   color: var(--text-dark);
-  border-radius: 0; /* Remover border-radius para seguir o esboço */
+  border-radius: 0;
   margin: 0;
+  cursor: pointer;
 }
 .sidebar-nav a:hover, .categories label:hover {
   background-color: var(--hover-bg);
@@ -147,7 +147,7 @@ body {
   margin-right: 1rem;
 }
 
-/* --- Conteúdo Principal --- */
+
 .main-content {
   flex-grow: 1;
   padding: 1.5rem;
@@ -179,18 +179,31 @@ body {
 }
 
 
+.ad-banner-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 2rem;
+}
 .ad-banner {
-  background-color: var(--hover-bg); /* Cor clara para o banner de anúncio */
+  background: linear-gradient(45deg, var(--primary-color), #8c0000); 
+  color: #fff; 
   width: 100%;
   min-height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
-  border-radius: 8px; /* Mais suave que o esboço original do Youtube */
-  font-weight: bold;
-  color: var(--text-light);
-  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-weight: 500; 
+  border: none; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ad-banner:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.ad-banner p {
+    font-size: 1.2rem;
 }
 
 .content-section {
@@ -199,21 +212,20 @@ body {
 .content-section h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-color); /* Linha divisória como no esboço */
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
-/* --- Grid de Conteúdo (Cursos, Aulas, Dicas) --- */
+
 .content-grid {
   display: grid;
-  /* Cria colunas responsivas: elas terão no mínimo 250px e no máximo 1fr (fração do espaço) */
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .content-card {
   background: var(--card-bg);
-  border-radius: 8px; /* Mais suave que o esboço original do Youtube */
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   overflow: hidden;
@@ -224,7 +236,7 @@ body {
 }
 .content-card img {
   width: 100%;
-  height: 170px; /* Altura fixa para as thumbnails, como no esboço */
+  height: 170px;
   object-fit: cover;
   display: block;
 }
@@ -235,7 +247,7 @@ body {
   font-size: 1rem;
   margin: 0 0 0.5rem 0;
   line-height: 1.4;
-  /* Limita o título a 2 linhas, como no esboço */
+
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -246,4 +258,130 @@ body {
   font-size: 0.9rem;
   color: var(--text-light);
   margin: 0;
+}
+
+
+.footer {
+    background-color: var(--header-bg);
+    color: #a9a9a9;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 3px solid var(--primary-color);
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-nav a {
+    color: #a9a9a9;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+}
+.footer-nav a:hover {
+    color: #ffffff;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.content-card {
+    height: 100%;
+}
+
+
+.detalhe-item {
+  display: flex;
+  gap: 2rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.detalhe-imagem {
+  flex: 1 1 350px; 
+}
+
+.detalhe-imagem img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.detalhe-info {
+  flex: 2 1 400px;
+}
+
+.detalhe-info h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+}
+
+.detalhe-info .autor {
+  font-size: 1.2rem;
+  color: #606060;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.detalhe-info .descricao {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.detalhe-outras-infos {
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.detalhe-outras-infos h2 {
+  margin-top: 0;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.detalhe-outras-infos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detalhe-outras-infos li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+.detalhe-outras-infos li:last-child {
+    border-bottom: none;
+}
+
+
+.back-to-home-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-home-btn:hover {
+    background-color: #575353; 
+    transform: translateY(-2px);
 }
