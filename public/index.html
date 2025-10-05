@@ -1,13 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Conteúdo - Temas e Cursos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='-5' y='90' font-size='90'%3E📚%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-    <h1>Olá mundo</h1>
+
+  <header class="header">
+    <div class="logo-area">
+      <button class="menu-btn">☰</button>
+      <h1><a href="#" class="site-title">Conteúdo.dev</a></h1>
+    </div>
+    <form class="search-form">
+      <input type="text" placeholder="Pesquisar cursos, aulas, dicas...">
+      <button type="submit">🔍</button>
+    </form>
+    <div class="user-actions">
+      <button>Upload Aula</button>
+      <button>Notif.</button>
+      <button>Meu Perfil</button>
+    </div>
+  </header>
+
+  <div class="main-container">
+
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Meus Cursos</a></li>
+          <li><a href="#">Em Alta</a></li>
+          <li><a href="#">Inscrições</a></li>
+          <li><a href="#">Histórico</a></li>
+          <li><a href="#">Ver Mais Tarde</a></li>
+        </ul>
+      </nav>
+      <div class="categories">
+        <h3>Categorias</h3>
+        <ul>
+          <li><label><input type="checkbox" checked> Desenvolvimento Web</label></li>
+          <li><label><input type="checkbox"> Design UI/UX</label></li>
+          <li><label><input type="checkbox"> Marketing Digital</label></li>
+          <li><label><input type="checkbox" checked> Ciência de Dados</label></li>
+          <li><label><input type="checkbox"> Negócios</label></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <nav class="content-nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Cursos</a>
+        <a href="#">Vídeos</a>
+        <a href="#">Dicas</a>
+      </nav>
+
+      <section class="ad-banner">
+        <p>Aprimore seus conhecimentos com 20% de desconto em TODA PLATAFORMA!</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Cursos Recomendados</h2>
+        <div class="content-grid">
+          <article class="content-card">
+            <img src="images/frontend.png" alt="Thumbnail do Curso React">
+            <div class="card-info">
+              <h3>Desenvolvimento Frontend com React</h3>
+              <p>Professor João Silva</p>
+              <span>15 Aulas • Iniciante</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <img src="images/cursouiux.jpeg" alt="Thumbnail do Curso Design UI/UX">
+            <div class="card-info">
+              <h3>Fundamentos de Design UI/UX</h3>
+              <p>Professora Maria Oliveira</p>
+              <span>10 Aulas • Intermediário</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <img src="images/python.png" alt="Thumbnail do Curso Python">
+            <div class="card-info">
+              <h3>Introdução à Programação com Python</h3>
+              <p>Professor Carlos Mendes</p>
+              <span>20 Aulas • Iniciante</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <img src="images/capamarketing.png" alt="Thumbnail do Curso Marketing">
+            <div class="card-info">
+              <h3>Marketing Digital Essencial</h3>
+              <p>Professora Ana Costa</p>
+              <span>8 Aulas • Iniciante</span>
+            </div>
+          </article>
+          <article class="content-card">
+            <img src="images/htmlcss.png" alt="Thumbnail do Curso HTML CSS">
+            <div class="card-info">
+              <h3>HTML e CSS do Zero ao Avançado</h3>
+              <p>Professor Pedro Santos</p>
+              <span>18 Aulas • Iniciante</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Aulas e Dicas</h2>
+        <div class="content-grid">
+          <article class="content-card">
+            <img src="images/git.png"alt="Thumbnail da Aula Git">
+            <div class="card-info">
+              <h3>Aula: Introdução ao Git e GitHub</h3>
+              <p>Professor Rodrigo Alves</p>
+              <span>25 min • Dica</span>
+            </div>
+          </article>
+           <article class="content-card">
+            <img src="images/produtividade.jpeg" alt="Thumbnail da Dica de Produtividade">
+            <div class="card-info">
+              <h3>Dica: 5 Ferramentas para Produtividade</h3>
+              <p>Comunidade</p>
+              <span>5 min • Dica</span>
+            </div>
+          </article>
+           <article class="content-card">
+            <img src="images/sql.jpg" alt="Thumbnail da Aula SQL">
+            <div class="card-info">
+              <h3>Aula: SQL Básico para Análise de Dados</h3>
+              <p>Professora Fernanda Lima</p>
+              <span>40 min • Aula</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
 </body>
 </html>
